@@ -255,7 +255,7 @@ main p {
   gap: 30px;
   place-items: center;
 }
-.quality .container .wrapper .card h1{
+.quality .container .wrapper .card h1 {
   text-align: center;
   color: var(--white);
   font-size: 56px;
@@ -290,6 +290,7 @@ main p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  place-items: center;
 }
 .testimonials .container .wrapper .card {
   padding: 30px;
@@ -297,7 +298,7 @@ main p {
   border-radius: 16px;
   max-width: 370px;
 }
-.testimonials .container .wrapper .card .top{
+.testimonials .container .wrapper .card .top {
   display: flex;
   gap: 12px;
   align-items: center;
@@ -330,6 +331,123 @@ main p {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
+}
+/* Support Styles */
+.support {
+  background: var(--white);
+  min-height: fit-content;
+}
+.support .container h1 {
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.support .container .inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.support .container .inputs input {
+  padding: 20px 400px 20px 30px;
+  border-radius: 40px;
+  border: 1px solid var(--black);
+  outline: none;
+}
+.support .container .inputs input::placeholder {
+  color: var(--black);
+  font-weight: 600;
+  font-size: 18px;
+}
+.support .container .inputs button {
+  background: black;
+  color: var(--white);
+}
+/* Location Styles */
+.location .container .wrapper {
+  display: flex;
+  gap: 145px;
+  align-items: center;
+  justify-content: space-between;
+}
+.location .container .wrapper .left,
+.location .container .wrapper .right {
+  max-width: 50%;
+}
+.location .container .wrapper .right img {
+  max-width: 100%;
+}
+.location .container .wrapper .left h1 {
+  color: var(--white);
+  font-weight: bold;
+  font-size: 50px;
+  margin-bottom: 16px;
+}
+.location .container .wrapper .left p {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 70px;
+}
+
+/* Footer Styles */
+footer {
+  width: 100%;
+  padding: 135px 0;
+  background: var(--gray);
+}
+footer .container .wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #4F4F4F;
+  gap: 103px;
+  margin-bottom: 28px;
+}
+footer .container .wrapper .menu a{
+  display: block;
+  color: var(--white);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 2;
+  transition: all .3s ease;
+}
+footer .container .wrapper .menu a:hover {
+  opacity: 0.6;
+}
+footer .container .wrapper .menu h3 {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 30px;
+  white-space: nowrap;
+}
+footer .container .wrapper .menu .images img{
+  display: inline-block;
+  margin-right: 20px;
+}
+footer .container .wrapper .menu .images img:first-child {
+  margin-bottom: 20px;
+}
+footer .container .social {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+footer .container .social img {
+  cursor: pointer;
+}
+footer .container .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .container .bottom span {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 300;
 }
 /* Responsive Styles */
 @media (max-width: 1280px) {
@@ -392,6 +510,19 @@ main p {
   .food-menu .container .wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
+  .testimonials .container .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  footer .container .wrapper {
+    flex-direction: column;
+  }
+  footer .container .bottom {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -404,6 +535,28 @@ main p {
   }
   .quality .container .wrapper {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .support .container .inputs {
+    flex-direction: column;
+  }
+  .support .container .inputs input {
+    padding: 16px 95px 16px 16px;
+    width: 100%;
+  }
+  .support .container .inputs button {
+    padding: 16px 95px;
+    width: 100%;
+  }
+  .testimonials .container .wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .location .container .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .location .container .wrapper .left,
+  .location .container .wrapper .right {
+    max-width: 100%;
   }
 }
 @media (max-width: 340px) {
