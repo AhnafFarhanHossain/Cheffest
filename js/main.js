@@ -7,3 +7,9 @@ function closeNav() {
     document.getElementById("nav").style.display = "none"
     document.getElementById("firstLogo").style.display = "block"
 }
+
+// CounterUp Code
+$('.counter').counterUp({
+    delay: 10,
+    time: 800
+});
